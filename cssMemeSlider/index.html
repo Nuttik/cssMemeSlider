@@ -5,16 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CSS Meme Slider</title>
-    <link rel="stylesheet" href="css/styles/normalize.css" />
-    <link rel="stylesheet" href="css/styles/main.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <header></header>
     <main>
-      <h1>This is a Heading</h1>
-      <p>This is a paragraph.</p>
+      <section class="slider">
+        <div class="slider__img-list-wrapper">
+          <ul class="slider__img-list">
+            <li class="slider__img">
+              <img src="images/meme-1.jpg" alt="" />
+            </li>
+            <li class="slider__img">
+              <img src="images/meme-1.jpg" alt="" />
+            </li>
+            <li class="slider__img">
+              <img src="images/meme-1.jpg" alt="" />
+            </li>
+            <li class="slider__img">
+              <img src="images/meme-1.jpg" alt="" />
+            </li>
+            <li class="slider__img">
+              <img src="images/meme-1.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+        <div class="slider__flex-row">
+          <div class="slider__controls controls">
+            <ul class="controls__list">
+              <li class="controls__item">
+                <div class="controls__circle"></div>
+              </li>
+              <li class="controls__item">
+                <div class="controls__circle"></div>
+              </li>
+              <li class="controls__item">
+                <div class="controls__circle"></div>
+              </li>
+              <li class="controls__item">
+                <div class="controls__circle"></div>
+              </li>
+              <li class="controls__item">
+                <div class="controls__circle"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="slider__img-titles-list">
+            <div class="slider__img-title">
+              <p>The fun title for this meme</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>footer site</footer>
-    <script src="js/script.js"></script>
+    <footer>Nuttik</footer>
   </body>
 </html>

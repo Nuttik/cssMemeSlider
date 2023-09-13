@@ -1,4 +1,13 @@
 /*Переменные*/
 :root {
   --main-bg-color: rgb(31, 31, 31);
+  --text-color: #fcfcfc;
+}
+body {
+  background: var(--main-bg-color);
+  color: var(--text-color);
+}
+.slider {
+  max-width: 960px;
+  margin: auto;
 }
