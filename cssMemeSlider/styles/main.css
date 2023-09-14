@@ -7,7 +7,66 @@ body {
   background: var(--main-bg-color);
   color: var(--text-color);
 }
+ul {
+  list-style: none;
+}
+input {
+  display: none;
+}
+
 .slider {
   max-width: 960px;
   margin: auto;
+  display: grid;
+  /* ! */
+  grid-template-areas:
+    "A A A A   A A A A   A A A A"
+    "A A A A   A A A A   A A A A"
+    "B B B B   B B B C   D E F J";
+}
+.slider__img-list-wrapper {
+  grid-area: A;
+}
+.slider__titles-list {
+  grid-area: B;
+}
+.slider label.control-1 {
+  grid-area: C;
+}
+.slider label.control-2 {
+  grid-area: D;
+}
+.slider label.control-3 {
+  grid-area: E;
+}
+.slider label.control-4 {
+  grid-area: F;
+}
+.slider label.control-5 {
+  grid-area: J;
+}
+
+.slider__img-list-wrapper {
+  width: calc(100% - 2rem);
+  margin: 2rem auto;
+  overflow: hidden;
+}
+.slider__img-list {
+  display: flex;
+  margin-left: 0;
+}
+.slider__control {
+}
+.slider__control:checked + label {
+  background: #e83737;
+  color: #fff;
+  border-color: #e83737;
+}
+#control-3:checked ~ ul .slider__title {
+  background: #e83737;
+  color: #fff;
+  border-color: #e83737;
+}
+#control-3:checked ~ .slider__img-list-wrapper .slider__img-list {
+  margin-left: -980px;
 }
