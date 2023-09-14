@@ -1,8 +1,8 @@
 /*Переменные*/
 :root {
-  --main-bg-color: rgb(31, 31, 31);
+  --main-bg-color: #1f1f1f;
   --footer-bg-color: rgb(56, 56, 56);
-  --text-color: #fcfcfc;
+  --text-color: #e3e3e3;
   --color-blue: #79a9ef;
 }
 
@@ -35,7 +35,7 @@ input {
   display: none;
 }
 main {
-  max-width: 960px;
+  max-width: 60rem;
   margin: auto;
   padding-bottom: 3rem;
 }
@@ -83,14 +83,11 @@ footer {
   grid-area: J;
 }
 .slider__img-list {
-  display: flex;
   margin-left: 0;
-  -webkit-transition: margin-left 0.6s cubic-bezier(0.4, 0, 1, 1);
-  -o-transition: margin-left 0.6s cubic-bezier(0.4, 0, 1, 1);
-  transition: margin-left 0.6s cubic-bezier(0.4, 0, 1, 1);
 }
 .slider__img-list-wrapper img {
-  height: 100%;
+  width: 60rem;
+  display: block;
 }
 .slider__control {
   width: 1.25rem;
@@ -130,21 +127,58 @@ footer {
 }
 
 /*анимация слайдера*/
-#control-1:checked ~ .slider__img-list-wrapper .slider__img-list {
-  margin: 0;
-  padding: 0;
+.slider__img-list-wrapper ul .slider__img {
+  display: none;
 }
-#control-2:checked ~ .slider__img-list-wrapper .slider__img-list {
-  margin-left: -100%;
+#control-1:checked ~ .slider__img-list-wrapper #slide-1 {
+  display: block;
+  animation: 0.6s moveSlide forwards;
 }
-#control-3:checked ~ .slider__img-list-wrapper .slider__img-list {
-  margin-left: -200%;
+#control-2:checked ~ .slider__img-list-wrapper #slide-2 {
+  display: block;
+  animation: 0.6s moveSlide forwards;
 }
-#control-4:checked ~ .slider__img-list-wrapper .slider__img-list {
-  margin-left: -300%;
+#control-3:checked ~ .slider__img-list-wrapper #slide-3 {
+  display: block;
+  animation: 0.6s moveSlide forwards;
 }
-#control-5:checked ~ .slider__img-list-wrapper .slider__img-list {
-  margin-left: -400%;
+#control-4:checked ~ .slider__img-list-wrapper #slide-4 {
+  display: block;
+  animation: 0.6s moveSlide forwards;
+}
+#control-5:checked ~ .slider__img-list-wrapper #slide-5 {
+  display: block;
+  animation: 0.6s moveSlide forwards;
+}
+
+#control-2:checked ~ .slider__img-list-wrapper ul {
+  background: url("../images/meme-2.jpg") no-repeat center;
+}
+
+#control-3:checked ~ .slider__img-list-wrapper ul {
+  background: url("../images/meme-3.jpg") no-repeat center;
+}
+
+#control-4:checked ~ .slider__img-list-wrapper ul {
+  background: url("../images/meme-4.jpg") no-repeat center;
+}
+
+#control-5:checked ~ .slider__img-list-wrapper ul {
+  background: url("../images/meme-5.jpg") no-repeat center;
+}
+#control-1:checked ~ .slider__img-list-wrapper ul {
+  background: url("../images/meme-6.jpg") no-repeat center;
+}
+@keyframes moveSlide {
+  0% {
+    margin-left: 99%;
+  }
+  10% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
 }
 
 /*анимация контролов*/
