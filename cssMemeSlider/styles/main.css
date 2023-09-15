@@ -12,8 +12,17 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.125rem;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
 }
@@ -44,6 +53,7 @@ footer {
 }
 .slider {
   margin: 1rem auto 2rem;
+  display: -ms-grid;
   display: grid;
   /* ! */
   grid-template-areas:
@@ -57,29 +67,47 @@ footer {
   margin: 2rem auto 1.5rem;
   overflow: hidden;
   border-radius: 1rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem #0000008a;
   box-shadow: 0.5rem 0.5rem 1rem #0000008a;
 }
 .slider__img-list-wrapper {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 18;
   grid-area: A;
 }
 .slider__titles-list {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
   grid-area: B;
   overflow: hidden;
   white-space: nowrap;
 }
 .slider label.control-1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 14;
   grid-area: D;
 }
 .slider label.control-2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 15;
   grid-area: E;
 }
 .slider label.control-3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 16;
   grid-area: F;
 }
 .slider label.control-4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 17;
   grid-area: H;
 }
 .slider label.control-5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 18;
   grid-area: J;
 }
 .slider__img-list {
@@ -92,8 +120,14 @@ footer {
 .slider__control {
   width: 1.25rem;
   height: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
   margin-right: 0.5rem;
@@ -132,22 +166,27 @@ footer {
 }
 #control-1:checked ~ .slider__img-list-wrapper #slide-1 {
   display: block;
+  -webkit-animation: 0.6s moveSlide forwards;
   animation: 0.6s moveSlide forwards;
 }
 #control-2:checked ~ .slider__img-list-wrapper #slide-2 {
   display: block;
+  -webkit-animation: 0.6s moveSlide forwards;
   animation: 0.6s moveSlide forwards;
 }
 #control-3:checked ~ .slider__img-list-wrapper #slide-3 {
   display: block;
+  -webkit-animation: 0.6s moveSlide forwards;
   animation: 0.6s moveSlide forwards;
 }
 #control-4:checked ~ .slider__img-list-wrapper #slide-4 {
   display: block;
+  -webkit-animation: 0.6s moveSlide forwards;
   animation: 0.6s moveSlide forwards;
 }
 #control-5:checked ~ .slider__img-list-wrapper #slide-5 {
   display: block;
+  -webkit-animation: 0.6s moveSlide forwards;
   animation: 0.6s moveSlide forwards;
 }
 
@@ -169,6 +208,17 @@ footer {
 #control-1:checked ~ .slider__img-list-wrapper ul {
   background: url("../images/meme-6.jpg") no-repeat center;
 }
+@-webkit-keyframes moveSlide {
+  0% {
+    margin-left: 99%;
+  }
+  10% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
 @keyframes moveSlide {
   0% {
     margin-left: 99%;
@@ -188,23 +238,40 @@ ul .slider__title {
 
 #control-1:checked ~ ul #title-1 {
   display: block;
+  -webkit-animation: 0.3s moveTitle forwards;
   animation: 0.3s moveTitle forwards;
 }
 #control-2:checked ~ ul #title-2 {
   display: block;
+  -webkit-animation: 0.3s moveTitle forwards;
   animation: 0.3s moveTitle forwards;
 }
 #control-3:checked ~ ul #title-3 {
   display: block;
+  -webkit-animation: 0.3s moveTitle forwards;
   animation: 0.3s moveTitle forwards;
 }
 #control-4:checked ~ ul #title-4 {
   display: block;
+  -webkit-animation: 0.3s moveTitle forwards;
   animation: 0.3s moveTitle forwards;
 }
 #control-5:checked ~ ul #title-5 {
   display: block;
+  -webkit-animation: 0.3s moveTitle forwards;
   animation: 0.3s moveTitle forwards;
+}
+
+@-webkit-keyframes moveTitle {
+  from {
+    margin-left: 100%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
 }
 
 @keyframes moveTitle {
