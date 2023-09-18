@@ -1,0 +1,290 @@
+/*Переменные*/
+:root {
+  --main-bg-color: #1f1f1f;
+  --footer-bg-color: rgb(56, 56, 56);
+  --text-color: #e3e3e3;
+  --color-blue: #79a9ef;
+  --color-blue-light: #b8d4ff;
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.125rem;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+input {
+  display: none;
+}
+main {
+  max-width: 60rem;
+  margin: auto;
+  padding-bottom: 3rem;
+}
+footer {
+  background: var(--footer-bg-color);
+}
+.slider {
+  margin: 1rem auto 2rem;
+  display: -ms-grid;
+  display: grid;
+  /* ! */
+  grid-template-areas:
+    "A A A A   A A A A   A A A A A A A A A A"
+    "A A A A   A A A A   A A A A A A A A A A"
+    "B B B B   B B B B   B B B B C D E F H J";
+}
+
+.slider__img-list-wrapper {
+  width: 100%;
+  margin: 2rem auto 1.5rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem #0000008a;
+  box-shadow: 0.5rem 0.5rem 1rem #0000008a;
+}
+.slider__img-list-wrapper {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 18;
+  grid-area: A;
+}
+.slider__titles-list {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: B;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.slider label.control-1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 14;
+  grid-area: D;
+}
+.slider label.control-2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 15;
+  grid-area: E;
+}
+.slider label.control-3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 16;
+  grid-area: F;
+}
+.slider label.control-4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 17;
+  grid-area: H;
+}
+.slider label.control-5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 18;
+  grid-area: J;
+}
+.slider__img-list {
+  margin-left: 0;
+}
+.slider__img-list-wrapper img {
+  width: 60rem;
+  display: block;
+}
+.slider__control {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.slider__control span {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background: var(--color-blue);
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.slider__control:hover span {
+  background: var(--text-color);
+}
+.slider__control:active span {
+  background: var(--color-blue-light);
+}
+.slider__input:checked + .slider__control span {
+  background: none;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 0.0625rem solid var(--color-blue);
+}
+.slider__input:checked:hover + .slider__control span,
+.slider__input:checked:active + .slider__control span {
+  background: none;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 0.0625rem solid var(--text-color);
+}
+
+/*анимация слайдера*/
+.slider__img-list-wrapper ul .slider__img {
+  display: none;
+}
+#control-1:checked ~ .slider__img-list-wrapper #slide-1 {
+  display: block;
+  -webkit-animation: 0.6s moveSlide forwards;
+  animation: 0.6s moveSlide forwards;
+}
+#control-2:checked ~ .slider__img-list-wrapper #slide-2 {
+  display: block;
+  -webkit-animation: 0.6s moveSlide forwards;
+  animation: 0.6s moveSlide forwards;
+}
+#control-3:checked ~ .slider__img-list-wrapper #slide-3 {
+  display: block;
+  -webkit-animation: 0.6s moveSlide forwards;
+  animation: 0.6s moveSlide forwards;
+}
+#control-4:checked ~ .slider__img-list-wrapper #slide-4 {
+  display: block;
+  -webkit-animation: 0.6s moveSlide forwards;
+  animation: 0.6s moveSlide forwards;
+}
+#control-5:checked ~ .slider__img-list-wrapper #slide-5 {
+  display: block;
+  -webkit-animation: 0.6s moveSlide forwards;
+  animation: 0.6s moveSlide forwards;
+}
+
+#control-2:checked ~ .slider__img-list-wrapper ul {
+  background: url("../images/meme-2.jpg") no-repeat center;
+}
+
+#control-3:checked ~ .slider__img-list-wrapper ul {
+  background: url("../images/meme-3.jpg") no-repeat center;
+}
+
+#control-4:checked ~ .slider__img-list-wrapper ul {
+  background: url("../images/meme-4.jpg") no-repeat center;
+}
+
+#control-5:checked ~ .slider__img-list-wrapper ul {
+  background: url("../images/meme-5.jpg") no-repeat center;
+}
+#control-1:checked ~ .slider__img-list-wrapper ul {
+  background: url("../images/meme-6.jpg") no-repeat center;
+}
+@-webkit-keyframes moveSlide {
+  0% {
+    margin-left: 99%;
+  }
+  10% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+@keyframes moveSlide {
+  0% {
+    margin-left: 99%;
+  }
+  10% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+/*анимация контролов*/
+ul .slider__title {
+  display: none;
+}
+
+#control-1:checked ~ ul #title-1 {
+  display: block;
+  -webkit-animation: 0.3s moveTitle forwards;
+  animation: 0.3s moveTitle forwards;
+}
+#control-2:checked ~ ul #title-2 {
+  display: block;
+  -webkit-animation: 0.3s moveTitle forwards;
+  animation: 0.3s moveTitle forwards;
+}
+#control-3:checked ~ ul #title-3 {
+  display: block;
+  -webkit-animation: 0.3s moveTitle forwards;
+  animation: 0.3s moveTitle forwards;
+}
+#control-4:checked ~ ul #title-4 {
+  display: block;
+  -webkit-animation: 0.3s moveTitle forwards;
+  animation: 0.3s moveTitle forwards;
+}
+#control-5:checked ~ ul #title-5 {
+  display: block;
+  -webkit-animation: 0.3s moveTitle forwards;
+  animation: 0.3s moveTitle forwards;
+}
+
+@-webkit-keyframes moveTitle {
+  from {
+    margin-left: 100%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveTitle {
+  from {
+    margin-left: 100%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
