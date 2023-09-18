@@ -1,108 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS Meme Slider</title>
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/responsive.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-  </head>
 
-  <body>
-    <main>
-      <h1>CSS Meme Slider</h1>
-      <div class="slider">
-        <input
-          type="radio"
-          id="control-1"
-          name="controls"
-          class="slider__input"
-          checked
-        />
-        <label for="control-1" class="slider__control control-1"
-          ><span></span
-        ></label>
-        <input
-          type="radio"
-          id="control-2"
-          name="controls"
-          class="slider__input"
-        />
-        <label for="control-2" class="slider__control control-2"
-          ><span></span
-        ></label>
-        <input
-          type="radio"
-          id="control-3"
-          name="controls"
-          class="slider__input"
-        />
-        <label for="control-3" class="slider__control control-3"
-          ><span></span
-        ></label>
-        <input
-          type="radio"
-          id="control-4"
-          name="controls"
-          class="slider__input"
-        />
-        <label for="control-4" class="slider__control control-4"
-          ><span></span
-        ></label>
-        <input
-          type="radio"
-          id="control-5"
-          name="controls"
-          class="slider__input"
-        />
-        <label for="control-5" class="slider__control control-5"
-          ><span></span
-        ></label>
-        <ul class="slider__titles-list">
-          <li class="slider__title" id="title-1">
-            <p>Смотришь рекламу курсов по IT . . .</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CSS Meme Slider</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body>
+  <main>
+    <h1>CSS Meme Slider</h1>
+    <div class="slider">
+      <input type="radio" id="control-1" name="controls" class="slider__input" checked />
+      <label for="control-1" class="slider__control control-1"><span></span></label>
+      <input type="radio" id="control-2" name="controls" class="slider__input" />
+      <label for="control-2" class="slider__control control-2"><span></span></label>
+      <input type="radio" id="control-3" name="controls" class="slider__input" />
+      <label for="control-3" class="slider__control control-3"><span></span></label>
+      <input type="radio" id="control-4" name="controls" class="slider__input" />
+      <label for="control-4" class="slider__control control-4"><span></span></label>
+      <input type="radio" id="control-5" name="controls" class="slider__input" />
+      <label for="control-5" class="slider__control control-5"><span></span></label>
+      <ul class="slider__titles-list">
+        <li class="slider__title" id="title-1">
+          <p>Смотришь рекламу курсов по IT . . .</p>
+        </li>
+        <li class="slider__title" id="title-2">
+          <p>. . . случайно натыкаешься на RS School</p>
+        </li>
+        <li class="slider__title" id="title-3">
+          <p>. . . записываешься на курс</p>
+        </li>
+        <li class="slider__title" id="title-4">
+          <p>. . . успешно сдаешь все таски</p>
+        </li>
+        <li class="slider__title" id="title-5">
+          <p>Ты велеколепен!</p>
+        </li>
+      </ul>
+      <div class="slider__img-list-wrapper">
+        <ul class="slider__img-list">
+          <li class="slider__img" id="slide-1">
+            <img src="images/meme-2.jpg" alt="" />
           </li>
-          <li class="slider__title" id="title-2">
-            <p>. . . случайно натыкаешься на RS School</p>
+          <li class="slider__img" id="slide-2">
+            <img src="images/meme-3.jpg" alt="" />
           </li>
-          <li class="slider__title" id="title-3">
-            <p>. . . записываешься на курс</p>
+          <li class="slider__img" id="slide-3">
+            <img src="images/meme-4.jpg" alt="" />
           </li>
-          <li class="slider__title" id="title-4">
-            <p>. . . успешно сдаешь все таски</p>
+          <li class="slider__img" id="slide-4">
+            <img src="images/meme-5.jpg" alt="" />
           </li>
-          <li class="slider__title" id="title-5">
-            <p>Ты велеколепен!</p>
+          <li class="slider__img" id="slide-5">
+            <img src="images/meme-6.jpg" alt="" />
           </li>
         </ul>
-        <div class="slider__img-list-wrapper">
-          <ul class="slider__img-list">
-            <li class="slider__img" id="slide-1">
-              <img src="images/meme-2.jpg" alt="" />
-            </li>
-            <li class="slider__img" id="slide-2">
-              <img src="images/meme-3.jpg" alt="" />
-            </li>
-            <li class="slider__img" id="slide-3">
-              <img src="images/meme-4.jpg" alt="" />
-            </li>
-            <li class="slider__img" id="slide-4">
-              <img src="images/meme-5.jpg" alt="" />
-            </li>
-            <li class="slider__img" id="slide-5">
-              <img src="images/meme-6.jpg" alt="" />
-            </li>
-          </ul>
-        </div>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
 </html>
