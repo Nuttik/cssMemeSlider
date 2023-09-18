@@ -4,6 +4,7 @@
   --footer-bg-color: rgb(56, 56, 56);
   --text-color: #e3e3e3;
   --color-blue: #79a9ef;
+  --color-blue-light: #b8d4ff;
 }
 
 body {
@@ -142,9 +143,11 @@ footer {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-.slider__control:hover span,
-.slider__control:active span {
+.slider__control:hover span {
   background: var(--text-color);
+}
+.slider__control:active span {
+  background: var(--color-blue-light);
 }
 .slider__input:checked + .slider__control span {
   background: none;
